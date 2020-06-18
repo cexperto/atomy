@@ -1,0 +1,70 @@
+.carousel{
+    width: 100%;
+    overflow: scroll;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+ .carousel__container{  
+    white-space: nowrap;
+    margin: 60px 200px;
+    padding-bottom: 10px;
+}
+.carousel-item{
+    background: white;
+    width: 130px;
+    height: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 40px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+}
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px, 0, 0);
+}    
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item__details{
+    font-size: 10px;
+    opacity: 1;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;   
+}
+.carousel-item__details--title{
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 1%;
+  
+    }
+.carousel-item__details--subtitle{    
+    bottom: 0%;
+    color: white;
+    margin-left: 2px;
+    font-size: 10px;
+}
+
+.carousel-item__img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
